@@ -27,10 +27,13 @@
     "vite": "^2.9.9",
     "vue-tsc": "^0.34.7"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  // "husky": {
+  //   "hooks": {
+  //     "pre-commit": "lint-staged"
+  //   }
+  // },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.vue": [
