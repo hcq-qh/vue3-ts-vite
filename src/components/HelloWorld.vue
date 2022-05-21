@@ -6,7 +6,6 @@ defineProps<{ msg: string }>()
 const count = ref(0)
 const count2s = ref(0)
 const count44s = ref(0)
-const count564s = ref(0)
 
 </script>
 
