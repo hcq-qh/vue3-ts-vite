@@ -27,4 +27,22 @@ npx mrm@2 lint-staged
 npm install --save-dev @commitlint/config-conventional @commitlint/cli
 echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
 
+//遇到的问题
+//commitlint.config.js:1 报错 SyntaxError: Invalid or unexpected token
+// commitlint.config.js:1
+// ��m
+// SyntaxError: Invalid or unexpected token
+//     at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+//     at Module._compile (internal/modules/cjs/loader.js:1049:27)
+//     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+//     at Module.load (internal/modules/cjs/loader.js:950:32)
+//     at Function.Module._load (internal/modules/cjs/loader.js:790:14)
+//     at Module.require (internal/modules/cjs/loader.js:974:19)
+//     at module.exports (E:\nancalProject\sass-match-web\node_modules\@commitlint\load\node_modules\import-fresh\index.js:32:59)
+//     at loadJs (E:\nancalProject\sass-match-web\node_modules\@commitlint\load\node_modules\cosmiconfig\dist\loaders.js:16:18)
+//     at Explorer.loadFileContent (E:\nancalProject\sass-match-web\node_modules\@commitlint\load\node_modules\cosmiconfig\dist\Explorer.js:84:32)
+//     at Explorer.createCosmiconfigResult (E:\nancalProject\sass-match-web\node_modules\@commitlint\load\node_modules\cosmiconfig\dist\Explorer.js:89:36)
+// husky - commit-msg hook exited with code 1 (error)
+//解决
+// vscode 底下的 UTF-16 LE 点击选择通过编码保存，然后选UTF-8
 ```
