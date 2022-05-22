@@ -36,6 +36,6 @@
     }  
   },
   "lint-staged": {
-    "*.{jsx,ts,tsx,vue}": "eslint --cache --fix"
+    "*.{js,jsx,ts,tsx,vue}": "eslint --cache --fix"
   }
 }
