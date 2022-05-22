@@ -5,10 +5,11 @@ defineProps<{ msg: string }>()
 
 const count = ref(0)
 
+const count1 = ref(0)
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <h1>{{ msg+ count1}}</h1>
 
   <p>
     Recommended IDE setup:
