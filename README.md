@@ -253,7 +253,55 @@ app.use(createPinia())
 // in app.vue
 <router-view></router-view>
 ```
-11. 
+11. 设置别名(https://blog.csdn.net/young_sam/article/details/122287782)
+``` js
+//用于ts识别ts引入
+npm i -D @types/node
+// in vite.config.ts
+const path = require('path');
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue()],
+  resolve: {
+    // 配置路径别名
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
+});
+
+//tsconfig.json
+//paths 和 baseUrl
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+}
+
+//遇到问题The package “esbuild-windows-64“ could not be found, and is needed by esbuild
+npm i esbuild-windows-64
+```
+
+
 # 遇到的问题
 
 ## 【vue eslint】报错Component name “xxxxx“ should always be multi-word.eslintvue(https://blog.csdn.net/u013078755/article/details/123581070)
