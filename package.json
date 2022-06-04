@@ -9,9 +9,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@types/lodash-es": "^4.17.6",
+    "ant-design-vue": "^3.2.5",
+    "axios": "^0.27.2",
     "esbuild-windows-64": "^0.14.39",
+    "less": "^4.1.2",
+    "lodash-es": "4.17.21",
     "pinia": "^2.0.14",
-    "vue": "^3.2.25",
+    "vue": "^3.2.4",
     "vue-router": "4"
   },
   "devDependencies": {
@@ -41,6 +46,6 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,vue}": "eslint --cache --fix"
+    "*.{js,jsx,ts,tsx,vue}": "eslint  --fix"
   }
 }

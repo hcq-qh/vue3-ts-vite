@@ -300,7 +300,16 @@ export default defineConfig({
 //遇到问题The package “esbuild-windows-64“ could not be found, and is needed by esbuild
 npm i esbuild-windows-64
 ```
-
+12. css
+``` js
+npm install -D less
+```
+13. axios二次封装
+``` js
+yarn add axios
+```
+14. 引入reset.css文件重置样式
+15. 引入ant-design-vue 按需引入
 
 # 遇到的问题
 
@@ -319,4 +328,10 @@ overrides: [
       } // 给上面匹配的文件指定规则
     }
   ]
+```
+
+## Vue3安装依赖报错The engine “node“ is incompatible with this module
+``` js
+//这时候运行运行一个命令就会正常，这个命令会自动补充兼容所报的错误。
+yarn config set ignore-engines true
 ```
